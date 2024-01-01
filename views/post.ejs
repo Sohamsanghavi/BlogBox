@@ -1,0 +1,16 @@
+<%- include("partial/header.ejs") %>
+
+<h1><%= element[0].title %></h1>
+<br>
+<p><%= element[0].article %></p>
+<div style="display:inline-block;">
+    <form action="/edit1" method="post">
+         <button class="btn btn-success" name="edit2" type="submit" value="<%=element[0]._id%>"> Edit</button>
+    </form>
+</div>
+<div style="display:inline-block;">
+    <form action="/del" method="post">
+        <button class="btn btn-danger" name="del1" type="submit" value="<%=element[0]._id%>"> Delete</button>
+    </form>
+</div>
+<%- include("partial/footer.ejs") %>
